@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "current_feature": "core-skeleton",
+  "features": [
+    {
+      "id": "core-skeleton",
+      "title": "FastAPI/React skeleton with install script",
+      "status": "in_progress",
+      "acceptance": [
+        "FastAPI backend runs and serves API",
+        "React frontend builds and loads",
+        "Install script validates and copies skill structure",
+        "Basic lint/check passes"
+      ],
+      "implementation": [
+        "backend/main.py",
+        "frontend/src/App.tsx",
+        "scripts/install.mjs",
+        "package.json"
+      ],
+      "tests": [
+        "tests/test_backend.py",
+        "tests/test_install.py"
+      ]
+    },
+    {
+      "id": "theme-system",
+      "title": "Theme system with 3 themes and deal/draw/scaffold",
+      "status": "planned",
+      "acceptance": [
+        "Theme deal selects 3 themes by genre",
+        "Theme draw deals page anatomy from job",
+        "Theme scaffold emits tokens.css and base.css",
+        "Theme validate checks theme file contract"
+      ],
+      "implementation": [
+        "scripts/theme.mjs",
+        "references/themes/index.json",
+        "references/themes/*.md"
+      ],
+      "tests": [
+        "tests/test_theme.py"
+      ]
+    },
+    {
+      "id": "sloplint",
+      "title": "Sloplint static and render checks",
+      "status": "planned",
+      "acceptance": [
+        "Static checks run against Floor rules",
+        "Render checks via Puppeteer",
+        "Reports FAIL/REFLEX/FINISH with line numbers"
+      ],
+      "implementation": [
+        "scripts/sloplint.mjs",
+        "scripts/sloplint-render.mjs"
+      ],
+      "tests": [
+        "tests/test_sloplint.py"
+      ]
+    },
+    {
+      "id": "capture-photos",
+      "title": "Capture screenshots and photo library",
+      "status": "planned",
+      "acceptance": [
+        "Capture.mjs takes screenshots of URL/dev server",
+        "Photo library provides stand-in images by subject",
+        "Photos credited on page"
+      ],
+      "implementation": [
+        "scripts/capture.mjs",
+        "scripts/photos.json",
+        "scripts/picture.mjs"
+      ],
+      "tests": [
+        "tests/test_capture.py"
+      ]
+    },
+    {
+      "id": "redesign-audit",
+      "title": "Redesign and audit commands",
+      "status": "planned",
+      "acceptance": [
+        "Redesign keeps content/wiring, changes system",
+        "Audit reports violations without changes",
+        "Sloplint --before/--kept validates redesign"
+      ],
+      "implementation": [
+        "scripts/refcheck.mjs",
+        "references/redesign.md"
+      ],
+      "tests": [
+        "tests/test_redesign.py"
+      ]
+    }
+  ]
+}

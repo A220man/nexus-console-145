@@ -1,0 +1,133 @@
+:root {
+  --bg: #0a0a0b;
+  --fg: #fafafa;
+  --muted: #71717a;
+  --accent: #22d3ee;
+  --card: #18181b;
+  --border: #27272a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: var(--muted);
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+button {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--fg);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+button:hover:not(:disabled) {
+  background: var(--border);
+  border-color: var(--accent);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #ef4444;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.themes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.theme-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: all 0.2s;
+}
+
+.theme-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.theme-card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.genre {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.theme-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

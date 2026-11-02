@@ -5,7 +5,7 @@
     {
       "id": "core-skeleton",
       "title": "FastAPI/React skeleton with install script",
-      "status": "in_progress",
+      "status": "done",
       "acceptance": [
         "FastAPI backend runs and serves API",
         "React frontend builds and loads",

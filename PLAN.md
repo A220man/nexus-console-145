@@ -10,7 +10,7 @@ core-skeleton
 
 ### core-skeleton — FastAPI/React skeleton with install script
 
-Status: in_progress
+Status: done
 
 Acceptance:
 - FastAPI backend runs and serves API

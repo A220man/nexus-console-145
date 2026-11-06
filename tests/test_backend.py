@@ -47,13 +47,12 @@ def test_deal_themes_endpoint():
 
 def test_deal_themes_with_genre():
     """Test /api/themes/deal with genre filter"""
-    response = client.post('/api/themes/deal?genre=minimal')
+    response = client.post('/api/themes/deal?genre=clean')
     assert response.status_code == 200
     data = response.json()
     assert 'themes' in data
-    assert len(data['themes']) == 3
-
-
+    assert len(data['themes']) == 1
+    assert data['themes'][0]['genre'] == 'clean'
 if __name__ == '__main__':
     test_health_endpoint()
     test_list_themes_endpoint()

@@ -26,7 +26,7 @@
     {
       "id": "theme-system",
       "title": "Theme system with 3 themes and deal/draw/scaffold",
-      "status": "planned",
+      "status": "done",
       "acceptance": [
         "Theme deal selects 3 themes by genre",
         "Theme draw deals page anatomy from job",

@@ -1,0 +1,48 @@
+
+{
+  "version": "1.0.0",
+  "themes": [
+    {
+      "id": "clean-minimal",
+      "name": "Clean Minimal",
+      "genre": "clean",
+      "description": "High contrast, generous whitespace, system typography. Content-first with zero decoration.",
+      "file": "clean-minimal.md"
+    },
+    {
+      "id": "editorial-magazine",
+      "name": "Editorial Magazine",
+      "genre": "expressive",
+      "description": "Asymmetric layouts, dramatic type scale, editorial rhythm. Storytelling through visual hierarchy.",
+      "file": "editorial-magazine.md"
+    },
+    {
+      "id": "technical-docs",
+      "name": "Technical Docs",
+      "genre": "technical",
+      "description": "Monospace-forward, dense information architecture, syntax-aware. Built for documentation and specs.",
+      "file": "technical-docs.md"
+    },
+    {
+      "id": "warm-organic",
+      "name": "Warm Organic",
+      "genre": "expressive",
+      "description": "Soft radii, natural palette, hand-drawn accents. Approachable and human.",
+      "file": "warm-organic.md"
+    },
+    {
+      "id": "dark-mode-first",
+      "name": "Dark Mode First",
+      "genre": "technical",
+      "description": "Deep surfaces, vibrant accents, reduced glare. Optimized for low-light environments.",
+      "file": "dark-mode-first.md"
+    },
+    {
+      "id": "brutalist",
+      "name": "Brutalist",
+      "genre": "expressive",
+      "description": "Raw structure, stark contrasts, anti-aesthetic. Honest materials, no pretense.",
+      "file": "brutalist.md"
+    }
+  ]
+}

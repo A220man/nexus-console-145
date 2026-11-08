@@ -24,7 +24,7 @@ Tests: `tests/test_backend.py`, `tests/test_install.py`
 
 ### theme-system — Theme system with 3 themes and deal/draw/scaffold
 
-Status: planned
+Status: done
 
 Acceptance:
 - Theme deal selects 3 themes by genre

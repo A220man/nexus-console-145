@@ -1,0 +1,33 @@
+/* Base styles for theme */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a2e; background-color: #ffffff; line-height: 1.5; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0 0 var(--spacing-4); font-weight: 600; line-height: 1.1; color: #1a1a2e; }
+h1 { font-size: var(--typography-text-4xl); }
+h2 { font-size: var(--typography-text-3xl); }
+h3 { font-size: var(--typography-text-2xl); }
+h4 { font-size: var(--typography-text-xl); }
+h5 { font-size: var(--typography-text-lg); }
+h6 { font-size: var(--typography-text-base); }
+
+a { color: #2563eb; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--components-button-gap); padding: var(--components-button-padding-y) var(--components-button-padding-x); font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: var(--typography-text-sm); font-weight: var(--components-button-font-weight); border-radius: var(--components-button-radius); border: none; cursor: pointer; transition: background-color var(--transitions-transition-fast), color var(--transitions-transition-fast); }
+.btn-primary { background-color: #2563eb; color: white; }
+.btn-primary:hover { background-color: #1d4ed8; text-decoration: none; }
+.btn-secondary { background-color: #f8f9fa; color: #1a1a2e; border: 1px solid #e5e7eb; }
+.btn-secondary:hover { background-color: #e5e7eb; text-decoration: none; }
+
+.input { width: 100%; padding: var(--components-input-padding-y) var(--components-input-padding-x); font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace; font-size: var(--typography-text-sm); border: 1px solid #e5e7eb; border-radius: var(--components-input-radius); background-color: #ffffff; color: #1a1a2e; transition: border-color var(--transitions-transition-fast), box-shadow var(--transitions-transition-fast); }
+.input:focus { outline: none; border-color: #2563eb; box-shadow: 0 0 0 3px #2563eb40; }
+
+.card { padding: var(--components-card-padding); border-radius: var(--components-card-radius); border: 1px solid var(--color-border); background-color: #ffffff; }
+
+:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; } }
+

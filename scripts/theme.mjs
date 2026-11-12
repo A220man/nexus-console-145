@@ -119,6 +119,8 @@ function parseThemeMarkdown(content) {
           tokens.components[currentSubsection] = {};
         }
         target = tokens.components[currentSubsection];
+      } else if (currentCategory && tokens[currentCategory] !== undefined) {
+        target = tokens[currentCategory];
       }
 
       if (target !== null) {

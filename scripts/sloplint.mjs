@@ -52,8 +52,18 @@ function parseThemeFile(filePath) {
     if (headerMatch) {
       currentSection = headerMatch[1];
       sections[currentSection] = [];
-    } else if (currentSection && line.trim()) {
-      sections[currentSection].push(line);
+    } else if (currentSection) {
+      // Handle ### subsections
+      const subsectionMatch = line.match(/^### (.+)$/);
+      if (subsectionMatch) {
+        const subKey = subsectionMatch[1];
+        if (!sections[currentSection]) sections[currentSection] = {};
+        if (!sections[currentSection][subKey]) sections[currentSection][subKey] = [];
+        sections[currentSection][subKey].push(line.replace(/^### .+\s/, ''));
+      } else if (line.trim()) {
+        // Regular line - add to current section
+        sections[currentSection].push(line);
+      }
     }
   }
   
@@ -69,7 +79,7 @@ function checkAgainstFloorRules(themeName, themePath) {
   const { content, sections } = parseThemeFile(themePath);
   
   // Check for generic hero patterns (AI slop detection)
-  const heroSection = sections['Colors'] || [];
+  const heroSection = sections['Design Tokens'] || [];
   const colorLines = heroSection.map(l => l.toLowerCase());
   
   // Check for generic cliche phrases in usage notes
@@ -91,7 +101,7 @@ function checkAgainstFloorRules(themeName, themePath) {
   
   // Check for missing design tokens
   const requiredColors = ['--color-bg', '--color-fg', '--color-primary'];
-  const availableColors = (sections['Colors'] || []).join('\n');
+  const availableColors = (sections['Design Tokens'] || []).join('\n');
   
   for (const color of requiredColors) {
     if (!availableColors.includes(color)) {

@@ -1,6 +1,12 @@
 # Changelog
 
+## 1.7.0 — work-in-progress checkpoint
+
+Partial code published for continued development. Known issues: STATUS.md.
+
 ## 1.6.0 — work-in-progress checkpoint
+
+- **sloplint**: Fixed cliche-phrases detection to scan full theme content instead of only `## Usage Notes` section. Previously all themes incorrectly passed FINISH. Now correctly detects: `clean-minimal` (content-first, zero decoration), `editorial-magazine` (storytelling), `technical-docs` (built for).
 
 Partial code published for continued development. Known issues: STATUS.md.
 

@@ -84,7 +84,7 @@ function checkAgainstFloorRules(themeName, themePath) {
   
   // Check for generic cliche phrases in usage notes
   const usageSection = sections['Usage Notes'] || [];
-  const usageText = usageSection.join(' ').toLowerCase();
+  const usageText = content.toLowerCase();
   
   const clichePhrases = ['content-first', 'zero decoration', 'storytelling', 'built for'];
   for (const phrase of clichePhrases) {
